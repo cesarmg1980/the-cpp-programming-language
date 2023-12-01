@@ -55,3 +55,27 @@ For a function to be used in a *constant* expression, it must be defined as `con
 
 In a `switch` statement a value is tested agains a set of constants, the constants **must** be distinct and if any of the values match the constants the `default` branch is chosen, if no `default` is provided no action is taken.
 
+### 2.2.5 Pointers, Arrays, and Loops
+
+This is an array:
+
+```
+char v[6]; // array of chars
+```
+
+This is a pointer:
+
+```
+char* p; // pointer to char
+```
+
+```
+char* p = &v[3]; // p points to v's fourth element
+char x = *p; // *p is the object that p points to
+```
+
+*see 2.2.5-Pointers-Arrays-and-Loops.cpp*
+
+In a declaration `&` means "a reference to", a reference is similar to a pointer but you don't need to dereference it, also a reference cannot be make it reference to another object after its initialization.
+
+Note: It's often a good practice to check that a pointer argument it's actually pointing to something *see example*
